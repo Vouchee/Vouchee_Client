@@ -6,7 +6,7 @@ import HomeFooter from "./HomeFooter";
 
 const HomeLayout = () => {
   return (
-    <div>
+    <div className="max-w-[1000px] mx-auto">
       <HomeHeader />
       <Outlet />
       <HomeFooter />

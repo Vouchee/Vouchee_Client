@@ -12,7 +12,6 @@ import { MdPassword } from "react-icons/md";
 import { signInWithGoogle } from "../../utils/helpers";
 import { ResetPassword, UserAuthInput } from "../../components/Loading/Auth";
 import { auth } from "../../config/firebase.config";
-import { logoPrimary } from "../../assets/img";
 
 const Login = () => {
   const [email, setEmail] = useState("");
