@@ -3,7 +3,7 @@ import { Navigate, useRoutes } from "react-router-dom";
 
 import { HomeLayout } from "../layout/HomeLayout";
 
-import { Login } from "../pages/Auth";
+import { Login, Register } from "../pages/Auth";
 
 const Routers = ({ isLogin }) => {
   const routing = useRoutes([
@@ -17,7 +17,7 @@ const Routers = ({ isLogin }) => {
       element: !isLogin ? <HomeLayout /> : <Navigate to="/" />,
       children: [
         { path: "login", element: <Login /> },
-        // { path: "register", element: <Register /> },
+        { path: "register", element: <Register /> },
       ],
     },
   ]);
