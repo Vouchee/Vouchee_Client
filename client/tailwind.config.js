@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/flowbite/**/*.js",
+  ],
   theme: {
     container: {
       container: true,
@@ -11,7 +15,6 @@ module.exports = {
       },
       colors: {
         primary: "#33ACC7",
-
       },
       fontSize: {
         14: "14px",
@@ -62,5 +65,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwind-scrollbar")],
+  plugins: [require("tailwind-scrollbar"), require("flowbite/plugin")],
 };

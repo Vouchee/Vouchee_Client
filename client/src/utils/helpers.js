@@ -48,7 +48,7 @@ export const Menus = [
     id: uuidv4(),
     icon: <MdOutlineSettings />,
     name: <div className="text-nowrap">Cài đặt</div>,
-    uri: "/setting/profile",
+    uri: "/user/information",
   },
 ];
 
