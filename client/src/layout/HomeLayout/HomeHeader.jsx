@@ -1,11 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import { FaSearch } from "react-icons/fa";
 
 import { Logo } from "../../assets/img";
-import { Link } from "react-router-dom";
+import UserProfileDetails from "./UserProfileDetails";
 
 const HomeHeader = () => {
+  const user = useSelector((state) => state.user?.user);
+
   return (
     <div className="flex items-center justify-between bg-primary">
       <Link to="/">
@@ -23,9 +27,20 @@ const HomeHeader = () => {
           />
         </div>
       </div>
-      <Link to={"/auth/login"} className="bg-white p-2 px-8 rounded-2xl m-2">
-        Đăng nhập
-      </Link>
+      <div>
+        <UserProfileDetails />
+
+        {/* {user ? (
+          <UserProfileDetails />
+        ) : (
+          <Link
+            to={"/auth/login"}
+            className="bg-white p-2 px-8 rounded-2xl m-2"
+          >
+            Đăng nhập
+          </Link>
+        )} */}
+      </div>
     </div>
   );
 };

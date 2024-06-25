@@ -11,7 +11,7 @@ import {
 import { FcGoogle } from "react-icons/fc";
 import { AiOutlineCheck } from "react-icons/ai";
 import { FaEnvelope } from "react-icons/fa6";
-import { MdPassword } from "react-icons/md";
+import { MdPassword, MdPhone } from "react-icons/md";
 import { RxAvatar } from "react-icons/rx";
 
 import { signInWithGoogle } from "../../utils/helpers";
@@ -19,7 +19,9 @@ import { auth } from "../../config/firebase.config";
 import { UserAuthInput } from "../../components/Loading/Auth";
 
 const Register = () => {
+  const [username, setUsername] = useState("");
   const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -64,6 +66,7 @@ const Register = () => {
       }
     }
   };
+
   return (
     <div className="flex-grow">
       <div className="flex mt-6 mb-10">
@@ -77,13 +80,31 @@ const Register = () => {
                 <small>Sign up in less than 2 minutes.</small>
                 <>
                   <UserAuthInput
-                    label="Name"
-                    placeholder="Your name"
+                    label="Username"
+                    placeholder="Your username"
                     isPassword={false}
-                    setStateFunction={setName}
+                    setStateFunction={setUsername}
                     Icon={RxAvatar}
-                    values={name}
+                    values={username}
                   />
+                  <div className="flex space-x-4">
+                    <UserAuthInput
+                      label="Name"
+                      placeholder="Your name"
+                      isPassword={false}
+                      setStateFunction={setName}
+                      Icon={RxAvatar}
+                      values={name}
+                    />
+                    <UserAuthInput
+                      label="Phone"
+                      placeholder="Your phone"
+                      isPassword={false}
+                      setStateFunction={setPhone}
+                      Icon={MdPhone}
+                      values={phone}
+                    />
+                  </div>
                   <UserAuthInput
                     label="Email"
                     placeholder="example@gmail.com"
@@ -93,22 +114,24 @@ const Register = () => {
                     setGetEmailValidationStatus={setGetEmailValidationStatus}
                     values={email}
                   />
-                  <UserAuthInput
-                    label="Password"
-                    placeholder="Password need more than 6 letter"
-                    isPassword={true}
-                    setStateFunction={setPassword}
-                    Icon={MdPassword}
-                    values={password}
-                  />
-                  <UserAuthInput
-                    label="Confirm Password"
-                    placeholder="Confirm your password"
-                    isPassword={true}
-                    setStateFunction={setConfirmPassword}
-                    Icon={MdPassword}
-                    values={confirmPassword}
-                  />
+                  <div className="flex space-x-4">
+                    <UserAuthInput
+                      label="Password"
+                      placeholder="Password need more than 6 letter"
+                      isPassword={true}
+                      setStateFunction={setPassword}
+                      Icon={MdPassword}
+                      values={password}
+                    />
+                    <UserAuthInput
+                      label="Confirm Password"
+                      placeholder="Confirm your password"
+                      isPassword={true}
+                      setStateFunction={setConfirmPassword}
+                      Icon={MdPassword}
+                      values={confirmPassword}
+                    />
+                  </div>
                   <div className="relative mb-3">
                     <div className="flex items-center">
                       <input

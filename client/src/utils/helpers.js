@@ -9,7 +9,7 @@ import {
   MdShop,
   MdDashboardCustomize,
 } from "react-icons/md";
-import { RiFunctionLine } from "react-icons/ri";
+import { BsShop } from "react-icons/bs";
 import { FaUser } from "react-icons/fa6";
 import { IoShareSocial } from "react-icons/io5";
 import { TbTruckDelivery } from "react-icons/tb";
@@ -40,9 +40,9 @@ export const signOutAction = async () => {
 export const Menus = [
   {
     id: uuidv4(),
-    icon: <RiFunctionLine />,
-    name: <div className="text-nowrap">Chức năng</div>,
-    uri: "/dash",
+    icon: <BsShop />,
+    name: <div className="text-nowrap">Trang người bán</div>,
+    uri: "/seller/home",
   },
   {
     id: uuidv4(),

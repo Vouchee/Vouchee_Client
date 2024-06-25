@@ -12,6 +12,7 @@ import { MdPassword } from "react-icons/md";
 import { signInWithGoogle } from "../../utils/helpers";
 import { ResetPassword, UserAuthInput } from "../../components/Loading/Auth";
 import { auth } from "../../config/firebase.config";
+import { loginWithEmailPass } from "../../api";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -22,7 +23,7 @@ const Login = () => {
 
   const loginWithEmailPassword = async () => {
     if (getEmailValidationStatus) {
-      await signInWithEmailAndPassword(auth, email, password)
+      await loginWithEmailPass(email, password)
         .then((userCred) => {
           if (userCred) {
             console.log(userCred);

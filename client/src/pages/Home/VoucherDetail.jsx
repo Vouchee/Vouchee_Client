@@ -112,18 +112,18 @@ const VoucherDetail = () => {
               </div>
             </div>
 
-            <div className="flex space-x-4">
+            <div className="grid grid-cols-2 gap-4 items-center">
               <motion.div
                 {...buttonClick}
-                className="bg-primary text-white px-20 py-2 rounded-xl
-              cursor-pointer text-nowrap"
+                className="flex bg-primary text-white py-2 rounded-xl
+              cursor-pointer text-nowrap items-center justify-center"
               >
                 Mua ngay
               </motion.div>
               <motion.div
                 {...buttonClick}
-                className="bg-primary text-white px-20 py-2 rounded-xl
-                  cursor-pointer text-nowrap"
+                className="flex bg-primary text-white py-2 rounded-xl
+                  cursor-pointer text-nowrap items-center justify-center"
               >
                 Thêm vào giỏ hàng
               </motion.div>
