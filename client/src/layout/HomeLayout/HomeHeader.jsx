@@ -27,7 +27,7 @@ const HomeHeader = () => {
           />
         </div>
       </div>
-      <div>
+      <div className="relative inline-block text-left">
         <UserProfileDetails />
 
         {/* {user ? (

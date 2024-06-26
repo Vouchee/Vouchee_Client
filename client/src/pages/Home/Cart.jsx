@@ -10,7 +10,9 @@ const Cart = () => {
       <div>
         {/* Header  */}
         <div className="grid grid-cols-8 gap-1">
-          <div className="col-span-4"></div>
+          <div className="col-span-4">
+            <div></div>
+          </div>
           <div className=""></div>
           <div className=""></div>
           <div className=""></div>

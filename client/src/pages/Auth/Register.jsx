@@ -56,13 +56,7 @@ const Register = () => {
           );
         }
       } catch (error) {
-        if (error.code === "auth/missing-password") {
-          toast.warning("Password is required.");
-        } else if (error.code === "auth/email-already-in-use") {
-          toast.warning("Email has already been used.");
-        } else {
           toast.warning("An error occurred while creating the account.");
-        }
       }
     }
   };

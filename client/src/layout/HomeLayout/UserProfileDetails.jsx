@@ -16,7 +16,10 @@ function UserProfileDetails() {
   const [isMenu, setIsMenu] = useState(false);
 
   return (
-    <div className="flex items-center justify-center w-full rounded-md px-4 py-2 text-sm text-gray-700  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-gray-500">
+    <div
+      className="flex items-center justify-center w-full rounded-md px-4 py-2 text-sm text-gray-700  
+    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-gray-500"
+    >
       <motion.div
         className="flex flex-row items-center cursor-pointer"
         onClick={() => setIsMenu(!isMenu)}
@@ -38,7 +41,7 @@ function UserProfileDetails() {
           <motion.div
             className=" absolute top-16 right-0 px-4 py-3 rounded-xl 
           shadow-md z-10 flex flex-col items-start justify-start gap-4 w-full 
-          bg-white max-w-52"
+          bg-white min-w-210"
           >
             <div className="space-y-4 w-full">
               {Menus &&
