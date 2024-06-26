@@ -1,8 +1,7 @@
 import React from "react";
-import NavBar from "./SellerNavBar";
 
 const SellerHome = () => {
-  return <div><NavBar/></div>;
+  return <div>a</div>;
 };
 
 export default SellerHome;

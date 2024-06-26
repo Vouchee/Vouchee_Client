@@ -15,6 +15,12 @@ module.exports = {
       },
       colors: {
         primary: "#33ACC7",
+        secondary: "#297F9C",
+        third: "#1F6076",
+        textPrimary: "#E1F1F4",
+        textSecondary: "#FFFFFF",
+        heroPrimary: "#47BCD9",
+        heroSecondary: "#1C8CA8",
       },
       fontSize: {
         14: "14px",
