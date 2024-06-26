@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { FaChevronRight } from "react-icons/fa";
 
-import { logoPrimary } from "../../assets/img";
+import { Logo, logoPrimary } from "../../assets/img";
 import { ClientMenus } from "../../utils/helpers";
 import ClientListMenuItem from "./ClientListMenuItem";
 
@@ -47,10 +47,10 @@ const SellerSidebar = () => {
             />
           </Link>
           <p
-            className={`font-serif text-textPrimary font-extrabold
+            className={`font-serif text-textPrimary font-extrabold 
             uppercase tracking-[5px] ${isClose && "scale-0"} duration-200`}
           >
-            Vouchee
+            <img src={Logo} alt="logo" className="h-6" />
             <span className="text-heroPrimary block">Dashboard</span>
           </p>
         </div>
