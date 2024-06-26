@@ -3,7 +3,15 @@ import { Navigate, useRoutes } from "react-router-dom";
 
 import { Login, Register } from "../pages/Auth";
 import { Cart, Home, VoucherDetail } from "../pages/Home";
-import { SellerProduct } from "../pages/Seller";
+import {
+  SellerIncome,
+  SellerOrder,
+  SellerProduct,
+  SellerPublish,
+  SellerReverse,
+  SellerReview,
+  SellerTransaction,
+} from "../pages/Seller";
 import { HomeLayout, SellerLayout, UserLayout } from "../layout";
 import UserHome from "../pages/User/UserHome";
 import VoucherList from "../pages/User/UserBoughtVouchers";
@@ -32,7 +40,17 @@ const Routers = ({ isLogin }) => {
     {
       path: "/seller",
       element: <SellerLayout />,
-      children: [{ path: "productList", element: <SellerProduct /> }],
+      children: [
+        { path: "productList", element: <SellerProduct /> },
+        { path: "publish", element: <SellerPublish /> },
+
+        { path: "order", element: <SellerOrder /> },
+        { path: "reverse", element: <SellerReverse /> },
+        { path: "review", element: <SellerReview /> },
+
+        { path: "myIncome", element: <SellerIncome /> },
+        { path: "myTransaction", element: <SellerTransaction /> },
+      ],
     },
     {
       path: "/user",

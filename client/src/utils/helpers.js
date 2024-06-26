@@ -84,7 +84,7 @@ export const ClientMenus = [
       {
         title: "Quản lý đơn hoàn trả",
         Icon: RiRefundFill,
-        uri: "/seller/order",
+        uri: "/seller/reverse",
       },
       {
         title: "Quản lý đánh giá",
