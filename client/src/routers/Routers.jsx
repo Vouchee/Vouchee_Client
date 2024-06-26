@@ -3,7 +3,7 @@ import { Navigate, useRoutes } from "react-router-dom";
 
 import { Login, Register } from "../pages/Auth";
 import { Cart, Home, VoucherDetail } from "../pages/Home";
-import { SellerHome } from "../pages/Seller";
+import { SellerProduct } from "../pages/Seller";
 import { HomeLayout, SellerLayout, UserLayout } from "../layout";
 import UserHome from "../pages/User/UserHome";
 import VoucherList from "../pages/User/UserBoughtVouchers";
@@ -32,7 +32,7 @@ const Routers = ({ isLogin }) => {
     {
       path: "/seller",
       element: <SellerLayout />,
-      children: [{ path: "home", element: <SellerHome /> }],
+      children: [{ path: "productList", element: <SellerProduct /> }],
     },
     {
       path: "/user",

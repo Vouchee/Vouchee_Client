@@ -1,1 +1,1 @@
-export { default as SellerHome } from "./SellerHome";
+export { default as SellerProduct } from "./SellerProduct";
