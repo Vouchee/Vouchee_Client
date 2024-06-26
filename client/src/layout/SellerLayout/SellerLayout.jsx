@@ -7,18 +7,15 @@ import SellerSidebar from "./SellerSidebar";
 
 const SellerLayout = () => {
   return (
-    <main
-      className="min-h-screen h-screen flex-1 flex 
-      items-start justify-start"
-    >
+    <main className="min-h-screen h-screen flex">
       <SellerSidebar />
 
-      <div className="flex-1">
+      <div className="flex flex-col flex-1">
         <SellerHeader />
-        <section className="w-full h-[calc(100vh-80px)] overflow-auto">
+        <section className="flex-1 w-full overflow-auto">
           <Outlet />
-          <SellerFooter />
         </section>
+        <SellerFooter />
       </div>
     </main>
   );

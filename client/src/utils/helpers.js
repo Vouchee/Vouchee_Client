@@ -2,26 +2,25 @@ import { v4 as uuidv4 } from "uuid";
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 
 import {
+  MdOutlineHistory,
+  MdOutlineRateReview,
   MdOutlineSettings,
-  MdPayments,
-  MdCookie,
-  MdOutlineAttachEmail,
-  MdShop,
-  MdDashboardCustomize,
 } from "react-icons/md";
 import { BsShop } from "react-icons/bs";
-import { FaUser } from "react-icons/fa6";
-import { IoShareSocial } from "react-icons/io5";
+import { IoShareSocial, IoWallet } from "react-icons/io5";
 import { TbTruckDelivery } from "react-icons/tb";
-import { RiCustomerService2Fill } from "react-icons/ri";
-import { HiOutlineIdentification } from "react-icons/hi";
+import {
+  RiCustomerService2Fill,
+  RiInboxArchiveFill,
+  RiRefundFill,
+} from "react-icons/ri";
 import { SiZalo } from "react-icons/si";
-import { FaAddressBook } from "react-icons/fa6";
-import { TbAddressBookOff } from "react-icons/tb";
-import { IoMdTimer } from "react-icons/io";
 
 import { auth } from "../config/firebase.config";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaBoxes } from "react-icons/fa";
+import { AiFillProduct } from "react-icons/ai";
+import { LuBarChartHorizontal } from "react-icons/lu";
+import { PiCoinThin } from "react-icons/pi";
 
 const googleProider = new GoogleAuthProvider();
 
@@ -54,74 +53,61 @@ export const Menus = [
 
 export const ClientMenus = [
   {
-    title: "Tài khoản",
-    Icon: FaUser,
+    title: "Sản Phẩm",
+    Icon: AiFillProduct,
     spacing: true,
     submenu: true,
     subMenuItems: [
       {
-        title: "Thông tin tài khoản",
-        Icon: HiOutlineIdentification,
-        uri: "/dash/userInfomation",
+        title: "Quản lý sản phẩm",
+        Icon: FaBoxes,
+        uri: "/seller/productlist",
       },
       {
-        title: "Nạp tiền",
-        Icon: MdPayments,
-        uri: "/dash/payment",
+        title: "Thêm sản phẩm",
+        Icon: RiInboxArchiveFill,
+        uri: "/seller/publish",
       },
     ],
   },
   {
-    title: "Shopee Dashboard",
-    Icon: MdDashboardCustomize,
-    uri: "/dash/shopeeDashboard",
-    spacing: true,
-  },
-  {
-    title: "Shopee",
-    Icon: MdShop,
+    title: "Đơn hàng",
+    Icon: LuBarChartHorizontal,
     spacing: true,
     submenu: true,
     subMenuItems: [
       {
-        title: "Theo dõi đơn hàng",
+        title: "Đơn đặt hàng",
         Icon: TbTruckDelivery,
-        uri: "/dash/tracking",
+        uri: "/seller/order",
       },
       {
-        title: "Hẹn giờ đơn hàng",
-        Icon: IoMdTimer,
-        uri: "/dash/orderTimer",
-      },
-      // {
-      //   title: "Hẹn giờ đơn hàng 2",
-      //   Icon: IoMdTimer,
-      //   uri: "/dash/orderTimer2",
-      // },
-      {
-        title: "Kiểm tra MVD Cookie",
-        Icon: MdCookie,
-        uri: "/dash/checkMVDCookie",
+        title: "Quản lý đơn hoàn trả",
+        Icon: RiRefundFill,
+        uri: "/seller/order",
       },
       {
-        title: "Thêm địa chỉ",
-        Icon: FaAddressBook,
-        uri: "/dash/addAddress",
+        title: "Quản lý đánh giá",
+        Icon: MdOutlineRateReview,
+        uri: "/seller/review",
+      },
+    ],
+  },
+  {
+    title: "Tài Chính",
+    Icon: IoWallet,
+    spacing: true,
+    submenu: true,
+    subMenuItems: [
+      {
+        title: "Thu nhập của tôi",
+        Icon: PiCoinThin,
+        uri: "/seller/myIncome",
       },
       {
-        title: "Thêm email",
-        Icon: MdOutlineAttachEmail,
-        uri: "/dash/changeEmail",
-      },
-      {
-        title: "Thay đổi địa chỉ đơn hàng",
-        Icon: TbAddressBookOff,
-        uri: "/dash/changeAddressOrder",
-      },
-      {
-        title: "Giỏ Hàng và Sản Phẩm",
-        Icon: FaShoppingCart,
-        uri: "/dash/productAndCart",
+        title: "Lịch sử giao dịch",
+        Icon: MdOutlineHistory,
+        uri: "/seller/myTransaction",
       },
     ],
   },
